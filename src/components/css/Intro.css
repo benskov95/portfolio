@@ -1,0 +1,80 @@
+#intro-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+#door-left {
+    width: 50%;
+    height: 100vh;
+    background-color: silver;
+    border-right: 1px solid;
+}
+
+#door-right {
+    width: 50%;
+    height: 100vh;
+    background-color: silver;
+    border-right: 1px solid;
+}
+
+#door-left-moved {
+    width: 50%;
+    height: 100vh;
+    background-color: silver;
+    border-right: 1px solid;
+    overflow-x: hidden;
+    animation: move-door-left 1s forwards;
+}
+
+#door-right-moved {
+    width: 50%;
+    height: 100vh;
+    background-color: silver;
+    border-right: 1px solid;
+    overflow-x: hidden;
+    animation: move-door-right 1s forwards;
+}
+
+#door-btn {
+    position: absolute;
+    background-color: red;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 45vh;
+    border-radius: 50%;
+    border: 3px solid gray;
+    cursor: pointer;
+}
+
+#door-btn-moved {
+    position: absolute;
+    background-color: red;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 45vh;
+    border-radius: 50%;
+    border: 3px solid gray;
+    cursor: pointer;
+    animation: move-btn 1s forwards;
+}
+
+@keyframes move-door-left {
+    to {
+        margin-right: 50%;
+    }
+}
+
+@keyframes move-door-right {
+    to {
+        margin-left: 50%;
+    }
+}
+
+@keyframes move-btn {
+    to {
+        background-color: green;
+        margin-left: 100%;
+    }
+}
+
