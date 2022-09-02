@@ -1,80 +1,110 @@
 #intro-container {
     display: flex;
     height: 100vh;
+    width: 100%;
     justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 #door-left {
     width: 50%;
     height: 100vh;
-    background-color: silver;
-    border-right: 1px solid;
+    background: rgb(116,8,9);
+    background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(255,177,177,1) 45%, rgba(196,12,14,1) 75%);
+    border-right: 1px solid black;
+    z-index: 1;
 }
 
 #door-right {
     width: 50%;
     height: 100vh;
-    background-color: silver;
-    border-right: 1px solid;
+    background: rgb(116,8,9);
+    background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(255,177,177,1) 45%, rgba(196,12,14,1) 75%);
+    border-right: 1px solid black;
+    z-index: 1;
 }
 
 #door-left-moved {
     width: 50%;
     height: 100vh;
-    background-color: silver;
-    border-right: 1px solid;
+    background: rgb(116,8,9);
+    background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(0,0,0,1) 45%, rgba(196,12,14,1) 75%);
+    border-right: 1px solid black;
     overflow-x: hidden;
     animation: move-door-left 1s forwards;
+    animation-delay: 1s;
 }
 
 #door-right-moved {
     width: 50%;
     height: 100vh;
-    background-color: silver;
-    border-right: 1px solid;
+    background: rgb(116,8,9);
+    background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(0,0,0,1) 45%, rgba(196,12,14,1) 75%);
+    border-right: 1px solid black;
     overflow-x: hidden;
     animation: move-door-right 1s forwards;
+    animation-delay: 1s;
 }
 
 #door-btn {
     position: absolute;
-    background-color: red;
+    background-color: black;
     width: 3rem;
     height: 3rem;
     margin-top: 45vh;
     border-radius: 50%;
     border: 3px solid gray;
     cursor: pointer;
+    z-index: 2;
 }
 
 #door-btn-moved {
     position: absolute;
-    background-color: red;
+    background-color: black;
     width: 3rem;
     height: 3rem;
     margin-top: 45vh;
     border-radius: 50%;
     border: 3px solid gray;
     cursor: pointer;
-    animation: move-btn 1s forwards;
+    animation: activated 1s forwards, move-btn 1s forwards, fade 0.5s forwards;
+    animation-delay: 0s, 1s, 2s;
 }
 
 @keyframes move-door-left {
     to {
         margin-right: 50%;
+        background: rgb(116,8,9);
+        background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(0,0,0,1) 45%, rgba(196,12,14,1) 75%);
+
     }
 }
 
 @keyframes move-door-right {
     to {
         margin-left: 50%;
+        background: rgb(116,8,9);
+        background: linear-gradient(229deg, rgba(116,8,9,1) 0%, rgba(0,0,0,1) 45%, rgba(196,12,14,1) 75%);
+    }
+}
+
+@keyframes activated {
+    to {
+        background-color: red;
     }
 }
 
 @keyframes move-btn {
     to {
-        background-color: green;
         margin-left: 100%;
     }
 }
 
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}

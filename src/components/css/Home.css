@@ -1,0 +1,22 @@
+#home-container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+#bubble {
+    width: 30vh;
+    background-color: red;
+    padding: 20px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#home-title {
+    font-size: 6rem;
+}
+
+#bubble p {
+    font-size: 1.5rem;
+}
