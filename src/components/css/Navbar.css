@@ -1,7 +1,29 @@
 #navbar-container {
-
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    margin-right: 3rem;
 }
 
-.nav-item {
+.nav-btn {
+    font-family: "Inter";
+    font-size: 1rem;
+    padding: 0.8rem;
+    background-color: transparent;
+    border-width: 0px;
+    color: white;
+    cursor: pointer;
+}
 
+.nav-btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
 }
