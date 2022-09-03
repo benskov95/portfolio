@@ -1,3 +1,4 @@
+import Bubbles from './components/Bubbles';
 import Home from './components/Home';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       {/* <Intro /> */}
       <Navbar />
+      <Bubbles />
       <Home />
     </div>
   );

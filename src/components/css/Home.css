@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     margin-top: 3.5rem;
+    z-index: 1;
 }
 
 #home-container h1 {
@@ -14,84 +15,4 @@
     margin: 6rem auto 0px auto;
     max-width: 350px;
     font-size: 1.5rem;
-}
-
-.bubble {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    background: rgb(8,115,116);
-    background: linear-gradient(229deg, rgba(8,115,116,1) 0%, rgba(20,59,54,1) 13%, rgba(22,196,12,1) 98%);
-    border-radius: 200px;
-    position: absolute;
-}
-
-.x1 {
-    transform: scale(0.9);
-    opacity: 0.2;
-    animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
-}
-
-.x2 {
-    left: 10%;
-    transform: scale(0.6);
-    opacity: 0.5;
-    animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
-}
-.x3 {
-    left: 25%;
-    transform: scale(0.8);
-    opacity: 0.3;
-    animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-}
-.x4 {
-    left: 40%;
-    transform: scale(0.75);
-    opacity: 0.35;
-    animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
-}
-.x5 {
-    left: 45%;
-    transform: scale(0.8);
-    opacity: 0.3; 
-    animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
-}
-
-.x6 {
-    left: 60%;
-    transform: scale(0.8);
-    opacity: 0.3; 
-    animation: moveclouds 9s linear infinite, sideWays 1s ease-in-out infinite alternate;
-}
-
-.x7 {
-    left: 80%;
-    transform: scale(0.8);
-    opacity: 0.3; 
-    animation: moveclouds 15s linear infinite, sideWays 1s ease-in-out infinite alternate;
-}
-
-.x8 {
-    left: 90%;
-    transform: scale(0.8);
-    opacity: 0.3; 
-    animation: moveclouds 20s linear infinite, sideWays 1s ease-in-out infinite alternate;
-}
-
-@keyframes moveclouds { 
-    0% { 
-        top: 100vh;
-    }
-    100% { 
-        top: -500px;
-    }
-}
-
-@keyframes sideWays { 
-    0% { 
-        margin-left: 0px;
-    }
-    100% { 
-        margin-left: 50px;
-    }
 }

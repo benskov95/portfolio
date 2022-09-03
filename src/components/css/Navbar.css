@@ -1,6 +1,6 @@
 #navbar-container {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 0;
     margin-right: 3rem;
 }
@@ -8,11 +8,25 @@
 .nav-btn {
     font-family: "Inter";
     font-size: 1rem;
-    padding: 0.8rem;
+    margin: 0.8rem 0.3rem 0px 0.3rem;
     background-color: transparent;
     border-width: 0px;
     color: white;
     cursor: pointer;
+}
+
+.nav-btn-active {
+    font-family: "Inter";
+    font-size: 1rem;
+    margin: 0.8rem 0.3rem 0px 0.3rem;
+    background-color: transparent;
+    border-left: 2px solid lime;
+    border-right: 2px solid lime;
+    border-top: 0px;
+    border-bottom: 0px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .nav-btn::after {
@@ -26,4 +40,9 @@
 
 .nav-btn:hover::after {
     width: 100%;
+}
+
+.nav-btn-active:hover {
+    background-color: lime;
+    transition: background-color 0.5s;
 }
