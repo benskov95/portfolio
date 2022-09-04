@@ -1,27 +1,50 @@
-import { useRef } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router";
 import "./css/Navbar.css";
 
 export default function Navbar() {
-    const btnOne = useRef(null);
-    const btnTwo = useRef(null);
-    const btnThree = useRef(null);
+    const [activeBtn, setActiveBtn] = useState("1");
+    const loc = useLocation();
+    const navigate = useNavigate();
 
-    const setBtnActive = (e) => {
-        switch(e.target.id) {
+    useEffect(() => {
+        matchBtnWithPath();
+    }, [])
+
+    const matchBtnWithPath = () => {
+        switch(loc.pathname) {
+            case "/":
+                setActiveBtn("1");
+                break;
+            case "/work":
+                setActiveBtn("2");
+                break;
+            case "/about":
+                setActiveBtn("3");
+                break;
+            case "/contact":
+                setActiveBtn("4");
+                break;
+            default:
+                break;
+        }
+    }
+
+    const gotoPage = (e) => {
+        let id = e.target.id;
+        setActiveBtn(id);
+        switch(id) {
             case "1":
-                btnOne.current.className = "nav-btn-active";
-                btnTwo.current.className = "nav-btn";
-                btnThree.current.className = "nav-btn";
+                navigate("/");
                 break;
             case "2":
-                btnOne.current.className = "nav-btn";
-                btnTwo.current.className = "nav-btn-active";
-                btnThree.current.className = "nav-btn";
+                navigate("/work");
                 break;
             case "3":
-                btnOne.current.className = "nav-btn";
-                btnTwo.current.className = "nav-btn";
-                btnThree.current.className = "nav-btn-active";
+                navigate("/about");
+                break;
+            case "4":
+                navigate("/contact");
                 break;
             default:
                 break;
@@ -30,9 +53,10 @@ export default function Navbar() {
 
     return (
         <div id="navbar-container">
-            <button className="nav-btn" id="1" onClick={setBtnActive} ref={btnOne}>Work</button>
-            <button className="nav-btn" id="2" onClick={setBtnActive} ref={btnTwo}>About</button>
-            <button className="nav-btn" id="3" onClick={setBtnActive} ref={btnThree}>Contact me</button>
+            <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} id="1" onClick={gotoPage}>Home</button>
+            <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} id="2" onClick={gotoPage}>Work</button>
+            <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} id="3" onClick={gotoPage}>About</button>
+            <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} id="4" onClick={gotoPage}>Contact</button>
         </div>
     )
 }
