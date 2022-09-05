@@ -9,7 +9,7 @@ export default function Navbar() {
 
     useEffect(() => {
         matchBtnWithPath();
-    }, [])
+    }, []);
 
     const matchBtnWithPath = () => {
         switch(loc.pathname) {
@@ -31,7 +31,7 @@ export default function Navbar() {
     }
 
     const gotoPage = (e) => {
-        let id = e.target.id;
+        let id = e.target.name;
         setActiveBtn(id);
         switch(id) {
             case "1":
@@ -53,10 +53,10 @@ export default function Navbar() {
 
     return (
         <div id="navbar-container">
-            <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} id="1" onClick={gotoPage}>Home</button>
-            <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} id="2" onClick={gotoPage}>Work</button>
-            <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} id="3" onClick={gotoPage}>About</button>
-            <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} id="4" onClick={gotoPage}>Contact</button>
+            <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} name="1" onClick={gotoPage}>Home</button>
+            <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} name="2" onClick={gotoPage}>Work</button>
+            <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} name="3" onClick={gotoPage}>About</button>
+            <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} name="4" onClick={gotoPage}>Contact</button>
         </div>
     )
 }

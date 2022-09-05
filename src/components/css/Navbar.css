@@ -2,6 +2,7 @@
     position: absolute;
     z-index: 2;
     right: 0;
+    height: 5vh;
     margin-right: 3rem;
 }
 
@@ -45,4 +46,10 @@
 .nav-btn-active:hover {
     background-color: lime;
     transition: background-color 0.5s;
+}
+
+@media (min-width: 1000px) {
+    #navbar-container {
+        transform: scale(1.2);
+    }
 }

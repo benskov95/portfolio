@@ -1,5 +1,5 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import Bubbles from './components/Bubbles';
+import Background from './components/Background';
 import Home from './components/Home';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         {/* <Intro /> */}
         <Navbar />
-        <Bubbles />
+        <Background />
 
         <Routes>
           <Route path='/' element={<Home />} />
