@@ -1,9 +1,43 @@
+#svg-container {
+    position: absolute;
+    left: 0;
+    width: 12%;
+    height: 10vh;
+}
+
+svg polygon {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    transition: fill 1s;
+    animation: dash 10s infinite alternate;
+}
+
+svg polygon:hover {
+    fill: lime;
+}
+
 #navbar-container {
     position: absolute;
     z-index: 2;
-    right: 0;
+    left: 10%;
     height: 5vh;
-    margin-right: 3rem;
+    opacity: 0;
+    animation: show-nav 1s forwards;
+}
+
+#navbar-container-hidden {
+    position: absolute;
+    z-index: 2;
+    left: 10%;
+    height: 5vh;
+    animation: hide-nav 1s forwards;
 }
 
 .nav-btn {
@@ -48,8 +82,30 @@
     transition: background-color 0.5s;
 }
 
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+        stroke: lime;
+        stroke-width: 3;
+    }
+}
+
+@keyframes hide-nav {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes show-nav {
+    to {
+        opacity: 1;
+    }
+}
+
 @media (min-width: 1000px) {
     #navbar-container {
         transform: scale(1.2);
+        margin-right: 35%;
+        top: 1rem;
     }
 }

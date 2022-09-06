@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import "./css/Navbar.css";
 
 export default function Navbar() {
     const [activeBtn, setActiveBtn] = useState("1");
+    const navRef = useRef();
     const loc = useLocation();
     const navigate = useNavigate();
 
@@ -51,12 +52,31 @@ export default function Navbar() {
         }
     }
 
+    const toggleNav = () => {
+        let id = navRef.current.id;
+        if (id === "navbar-container-hidden") {
+            navRef.current.id = "navbar-container";
+            return;
+        }
+        navRef.current.id = "navbar-container-hidden";
+    }
+
     return (
-        <div id="navbar-container">
-            <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} name="1" onClick={gotoPage}>Home</button>
-            <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} name="2" onClick={gotoPage}>Work</button>
-            <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} name="3" onClick={gotoPage}>About</button>
-            <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} name="4" onClick={gotoPage}>Contact</button>
-        </div>
+        <>
+            <div id="svg-container">
+                <svg viewBox="670 60 600 500">
+                    <polygon 
+                    onClick={toggleNav} 
+                    points="850,75 958,137.5 958,262.5
+                            850,325 742,262.6 742,137.5" />
+                </svg>
+            </div>
+            <div id="navbar-container" ref={navRef}>
+                <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} name="1" onClick={gotoPage}>Home</button>
+                <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} name="2" onClick={gotoPage}>Work</button>
+                <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} name="3" onClick={gotoPage}>About</button>
+                <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} name="4" onClick={gotoPage}>Contact</button>
+            </div>
+        </>
     )
 }
