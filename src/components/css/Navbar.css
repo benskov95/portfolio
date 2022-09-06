@@ -1,5 +1,6 @@
 #svg-container {
     position: absolute;
+    top: 0.5rem;
     left: 0;
     width: 12%;
     height: 10vh;
@@ -26,7 +27,7 @@ svg polygon:hover {
 #navbar-container {
     position: absolute;
     z-index: 2;
-    left: 10%;
+    left: 8%;
     height: 5vh;
     opacity: 0;
     animation: show-nav 1s forwards;
@@ -35,7 +36,7 @@ svg polygon:hover {
 #navbar-container-hidden {
     position: absolute;
     z-index: 2;
-    left: 10%;
+    left: 8%;
     height: 5vh;
     animation: hide-nav 1s forwards;
 }
@@ -104,8 +105,11 @@ svg polygon:hover {
 
 @media (min-width: 1000px) {
     #navbar-container {
-        transform: scale(1.2);
         margin-right: 35%;
+        top: 1rem;
+    }
+
+    #navbar-container-hidden {
         top: 1rem;
     }
 }

@@ -1,5 +1,5 @@
 #chevron {
-    position: absolute;
+    position: fixed;
     right: 0;
     width: 40vw;
     height: 100vh;
