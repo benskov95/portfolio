@@ -1,8 +1,9 @@
 #contact-container {
     position: absolute;
-    margin: 3.5rem auto 0px auto;
+    top: 15vh;
     left: 0;
     right: 0;
+    margin: auto;
     animation: load 1s forwards;
 }
 

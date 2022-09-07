@@ -1,3 +1,7 @@
+#navbar-container {
+    user-select: none;
+}
+
 #svg-container {
     position: absolute;
     top: 0.5rem;
@@ -24,7 +28,7 @@ svg polygon:hover {
     fill: lime;
 }
 
-#navbar-container {
+#navbar {
     position: absolute;
     z-index: 2;
     left: 8%;
@@ -33,7 +37,7 @@ svg polygon:hover {
     animation: show-nav 1s forwards;
 }
 
-#navbar-container-hidden {
+#navbar-hidden {
     position: absolute;
     z-index: 2;
     left: 8%;
@@ -104,12 +108,12 @@ svg polygon:hover {
 }
 
 @media (min-width: 1000px) {
-    #navbar-container {
+    #navbar {
         margin-right: 35%;
         top: 1rem;
     }
 
-    #navbar-container-hidden {
+    #navbar-hidden {
         top: 1rem;
     }
 }

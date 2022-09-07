@@ -4,10 +4,10 @@
     column-gap: 3rem;
     justify-content: center;
     position: absolute;
+    top: 15vh;
     left: 0;
     right: 0;
     margin: auto;
-    top: 15vh;
 }
 
 #my-pic {
@@ -51,11 +51,12 @@
 }
 
 #code-section ul {
-    list-style: none;
+    list-style: square;
 }
 
 #code-section ul li {
     text-align: left;
+    margin-left: 1rem;
     min-width: 100px;
 }
 

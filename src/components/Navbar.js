@@ -54,15 +54,15 @@ export default function Navbar() {
 
     const toggleNav = () => {
         let id = navRef.current.id;
-        if (id === "navbar-container-hidden") {
-            navRef.current.id = "navbar-container";
+        if (id === "navbar-hidden") {
+            navRef.current.id = "navbar";
             return;
         }
-        navRef.current.id = "navbar-container-hidden";
+        navRef.current.id = "navbar-hidden";
     }
 
     return (
-        <>
+        <div id="navbar-container">
             <div id="svg-container">
                 <svg viewBox="670 60 600 500">
                     <polygon 
@@ -71,12 +71,12 @@ export default function Navbar() {
                             850,325 742,262.6 742,137.5" />
                 </svg>
             </div>
-            <div id="navbar-container" ref={navRef}>
+            <div id="navbar" ref={navRef}>
                 <button className={activeBtn === "1" ? "nav-btn-active" : "nav-btn"} name="1" onClick={gotoPage}>Home</button>
                 <button className={activeBtn === "2" ? "nav-btn-active" : "nav-btn"} name="2" onClick={gotoPage}>Work</button>
                 <button className={activeBtn === "3" ? "nav-btn-active" : "nav-btn"} name="3" onClick={gotoPage}>About</button>
                 <button className={activeBtn === "4" ? "nav-btn-active" : "nav-btn"} name="4" onClick={gotoPage}>Contact</button>
             </div>
-        </>
+        </div>
     )
 }

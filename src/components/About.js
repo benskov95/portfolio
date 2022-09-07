@@ -9,6 +9,8 @@ export default function About() {
         <div id="about-container">
             <div>
                 <img id="my-pic" src={myPic} alt="" />
+                <p>I'm a full-stack developer from and located 
+                    in Denmark (more specifically, on Bornholm).</p>
                 <p>
                     My programming journey started back in 2019 when I 
                     spontaneously decided to undertake an AP Degree in CS
@@ -27,21 +29,22 @@ export default function About() {
                     became that I had found my calling.
                 </p>
                 <p>
-                    Today I am certain of that, and with my degree now completed, I am actively looking for employment
-                    in the industry.
+                    Today I am certain of that, and with my degree now 
+                    completed, I am actively looking for an opportunity
+                    to get my career in software development started.
                 </p>
             </div>
             <div id="code-section">
                 <img id="code-pic" src={codeIcon} alt="" />
                 <p>Some of the languages, frameworks and 
-                    technologies I have worked with: 
+                    technologies I have worked with 
                 </p>
                 <div>
                     <ul>
                         {cSecListOne.map(item => {
                             return (
                                 <li>
-                                    - {item}
+                                    {item}
                                 </li>
                             )
                         })}
@@ -50,7 +53,7 @@ export default function About() {
                         {cSecListTwo.map(item => {
                             return (
                                 <li>
-                                    - {item}
+                                    {item}
                                 </li>
                             )
                         })}
