@@ -10,7 +10,7 @@ export default function About() {
             <div>
                 <img id="my-pic" src={myPic} alt="" />
                 <p>I'm a full-stack developer from and located 
-                    in Denmark (more specifically, on Bornholm).</p>
+                    in Denmark - more specifically, on Bornholm.</p>
                 <p>
                     My programming journey started back in 2019 when I 
                     spontaneously decided to undertake an AP Degree in CS

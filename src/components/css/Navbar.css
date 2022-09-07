@@ -28,7 +28,7 @@ svg polygon:hover {
     fill: lime;
 }
 
-#navbar {
+#navbar, #navbar-hidden {
     position: absolute;
     z-index: 2;
     left: 8%;
@@ -38,14 +38,11 @@ svg polygon:hover {
 }
 
 #navbar-hidden {
-    position: absolute;
-    z-index: 2;
-    left: 8%;
-    height: 5vh;
+    opacity: 1;
     animation: hide-nav 1s forwards;
 }
 
-.nav-btn {
+.nav-btn, .nav-btn-active {
     font-family: "Inter";
     font-size: 1rem;
     margin: 0.8rem 0.3rem 0px 0.3rem;
@@ -56,16 +53,10 @@ svg polygon:hover {
 }
 
 .nav-btn-active {
-    font-family: "Inter";
-    font-size: 1rem;
-    margin: 0.8rem 0.3rem 0px 0.3rem;
-    background-color: transparent;
     border-left: 2px solid lime;
     border-right: 2px solid lime;
     border-top: 0px;
     border-bottom: 0px;
-    color: white;
-    cursor: pointer;
     transition: background-color 0.5s;
 }
 

@@ -18,7 +18,8 @@
 }
 
 #home-container strong {
-    color: white;
+    /* color: white; */
+    color: lime;
     /* animation: blinker 2s infinite; */
     text-shadow: none;
 }
