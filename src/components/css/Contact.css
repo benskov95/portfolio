@@ -7,20 +7,12 @@
     animation: load 1s forwards;
 }
 
-#contact-container h1 {
-    font-size: 3rem;
-    text-decoration: underline;
-    opacity: 0;
-    animation: title-load1 1s forwards, test 1s forwards, title-load2 2s forwards;
-    animation-delay: 0s, 1s, 2s;
-}
-
 #contact-container h3 {
     max-width: 400px;
     margin: 0px auto 1.5rem auto;
     opacity: 0;
     animation: load 0.25s forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 #contact-container p {
@@ -29,7 +21,7 @@
     font-size: 0.8rem;
     opacity: 0;
     animation: load 0.25s forwards;
-    animation-delay: 2.25s;
+    animation-delay: 1.25s;
 }
 
 #contact-container p strong {
@@ -47,7 +39,7 @@
     max-width: 500px;
     opacity: 0;
     animation: load 0.25s forwards;
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
 }
 
 #content-field {
@@ -62,7 +54,7 @@
     min-height: 200px;
     opacity: 0;
     animation: load 0.25s forwards;
-    animation-delay: 2.75s;
+    animation-delay: 1.75s;
 }
 
 #content-field::-webkit-scrollbar {
@@ -80,58 +72,32 @@
 }
 
 #submit-btn {
-    background-color: transparent;
     color: white;
     font-size: 1.5rem;
-    border: 2px solid lime;
+    border: 2px solid white;
     margin-top: 1rem;
     font-family: "Inter";
-    transition: background-color 1s;
     cursor: pointer;
     opacity: 0;
+    background: linear-gradient(to left, transparent 50%, lime 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
     animation: load 1.5s forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 #submit-btn:hover {
-    background-color: lime;
-    transition: background-color 1s;
-}
-
-@keyframes title-load1 {
-    to {
-        opacity: 1;
-        margin-top: 30vh;
-        transform: scale(1.5);
-    }
-}
-
-@keyframes test {
-    to {
-        color: lime;
-        text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px lime,
-        0 0 82px lime,
-        0 0 92px lime,
-        0 0 102px lime,
-        0 0 151px lime;
-  }
-}
-
-@keyframes title-load2 {
-    to {
-        margin-top: 0;
-        color: white;
-        text-shadow: none;
-        transform: scale(1);
-    }
+    background-position: left;
 }
 
 @keyframes load {
     to {
         opacity: 1;
+    }
+}
+
+@media (min-width: 1000px) {
+    #contact-container {
+        margin-left: 35%;
     }
 }

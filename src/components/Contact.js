@@ -13,8 +13,6 @@ export default function Contact(props) {
     
     return (
         <div id="contact-container" ref={contactRef}>
-            {/* maybe scrap this and just make a button with the mailto action on it? */}
-            <h1>Contact me</h1>
             <h3>If you would like to contact me regarding work, send me an email using the form below.</h3>
             <p>Alternatively, send it to <strong>ben.sommer.skovgaard@gmail.com</strong><br/> elsewhere if you prefer.</p>
             <form action="mailto:ben.sommer.skovgaard@gmail.com" method="GET">
