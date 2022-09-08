@@ -32,7 +32,7 @@ export default function Work(props) {
         <div id="work-container" ref={workRef}>
             <div id="carousel">
                 <div id="slide-a" ref={slideRef}>
-                    <a href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/" title="Click to visit" target="_blank" rel="noreferrer">
                         <img src={imgLinks[currentSlide]} alt="" />
                     </a>
                 </div>

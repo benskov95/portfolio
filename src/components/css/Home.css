@@ -11,6 +11,12 @@
 #home-container h2 {
     font-size: 3rem;
     margin-bottom: -1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 0;
+    animation: typing 3s steps(60, end) forwards, unload 1s forwards;
+    animation-delay: 1s, 3s;
 }
 
 #home-container h1 {
@@ -26,19 +32,22 @@
     background-size: 200% auto;
     background-clip: border-box;
     background-clip: text;
-    animation: textclip 5s linear infinite;
+    opacity: 0;
+    animation: load 1s forwards, textclip 5s linear infinite;
+    animation-delay: 2s, 0s;
 }
 
 #home-container p {
     margin: 6rem auto 0px auto;
     max-width: 350px;
     font-size: 1.5rem;
+    opacity: 0;
+    animation: load 1s forwards;
+    animation-delay: 3s;
 }
 
 #home-container strong {
-    /* color: white; */
     color: lime;
-    /* animation: blinker 2s infinite; */
     text-shadow: none;
 }
 
@@ -46,6 +55,9 @@
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+    opacity: 0;
+    animation: load 1s forwards;
+    animation-delay: 3s;
 }
 
 #home-container div > * {
@@ -59,26 +71,23 @@
     }
 }
 
+@keyframes unload {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
 @keyframes textclip {
     to {
       background-position: 200% center;
     }
   }
-
-@keyframes blinker {
-    50% {
-        color: lime;
-        text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px lime,
-        0 0 82px lime,
-        0 0 92px lime,
-        0 0 102px lime,
-        0 0 151px lime;
-    }
-}
 
 @media (min-width: 1000px) {
     #home-container {
