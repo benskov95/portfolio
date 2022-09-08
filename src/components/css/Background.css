@@ -1,7 +1,21 @@
-#chevron {
+#chevron, #chevron-right, #chevron-left {
     position: fixed;
     right: 0;
-    width: 40vw;
+    width: 40%;
     height: 100vh;
+    z-index: -1;
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    transition: margin 1s, transform 1s;
+}
+
+#chevron-right {
+    left: 0;
+    margin-left: 60%;
+    transform: scaleX(1);
+}
+
+#chevron-left {
+    right: 0;
+    margin-right: 60%;
+    transform: scaleX(-1);
 }

@@ -1,12 +1,22 @@
 import "./css/About.css";
 import myPic from "../images/my-pic.jpg";
 import codeIcon from "../images/code-icon.png"
+import { useEffect, useRef } from "react";
 
-export default function About() {
-    let cSecListOne = ["React", "Vue", "JavaScript", "TypeScript", "Java", "C#", "Xamarin"];
-    let cSecListTwo = ["Python", "Haskell", "MySQL", "Azure AD", "Travis CI", "Power BI", "Docker"]
+export default function About(props) {
+    const cSecListOne = ["React", "Vue", "JavaScript", "TypeScript", "Java", "C#", "Xamarin"];
+    const cSecListTwo = ["Python", "Haskell", "MySQL", "Azure AD", "Travis CI", "Power BI", "Docker"];
+    const aboutRef = useRef();
+
+    useEffect(() => {
+        if (props.previousLoc === "/") {
+            aboutRef.current.style.animationDelay = "0s";
+        }
+        props.setPreviousLoc("/about");
+    });
+
     return (
-        <div id="about-container">
+        <div id="about-container" ref={aboutRef}>
             <div>
                 <img id="my-pic" src={myPic} alt="" />
                 <p>I'm a full-stack developer from and located 
@@ -43,7 +53,7 @@ export default function About() {
                     <ul>
                         {cSecListOne.map(item => {
                             return (
-                                <li>
+                                <li key={item}>
                                     {item}
                                 </li>
                             )
@@ -52,7 +62,7 @@ export default function About() {
                     <ul>
                         {cSecListTwo.map(item => {
                             return (
-                                <li>
+                                <li key={item}>
                                     {item}
                                 </li>
                             )

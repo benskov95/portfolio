@@ -7,8 +7,11 @@ import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import './root-css/App.css';
+import { useState } from 'react';
 
 function App() {
+  const [previousLoc, setPreviousLoc] = useState("/");
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -17,11 +20,11 @@ function App() {
         <Background />
 
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/work' element={<Work />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
+          <Route path='/' element={<Home previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path='/work' element={<Work previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path='/about' element={<About previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path='/contact' element={<Contact previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+        </Routes> 
       </div>
     </BrowserRouter>
   );

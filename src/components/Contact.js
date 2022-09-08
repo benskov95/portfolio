@@ -1,8 +1,18 @@
+import { useEffect, useRef } from "react";
 import "./css/Contact.css";
 
-export default function Contact() {
+export default function Contact(props) {
+    const contactRef = useRef();
+
+    useEffect(() => {
+        if (props.previousLoc === "/work") {
+            contactRef.current.style.animationDelay = "0s";
+        }
+        props.setPreviousLoc("/contact");
+    });
+    
     return (
-        <div id="contact-container">
+        <div id="contact-container" ref={contactRef}>
             {/* maybe scrap this and just make a button with the mailto action on it? */}
             <h1>Contact me</h1>
             <h3>If you would like to contact me regarding work, send me an email using the form below.</h3>

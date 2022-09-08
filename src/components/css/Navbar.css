@@ -30,7 +30,6 @@ svg polygon:hover {
 
 #navbar, #navbar-hidden {
     position: absolute;
-    z-index: 2;
     left: 8%;
     height: 5vh;
     opacity: 0;

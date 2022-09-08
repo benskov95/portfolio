@@ -8,6 +8,9 @@
     left: 0;
     right: 0;
     margin: auto;
+    opacity: 0;
+    animation: load 1s forwards;
+    animation-delay: 1s;
 }
 
 #my-pic {
@@ -58,6 +61,12 @@
     text-align: left;
     margin-left: 1rem;
     min-width: 100px;
+}
+
+@keyframes load {
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1000px) {
