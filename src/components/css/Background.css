@@ -1,5 +1,6 @@
 #chevron, #chevron-right, #chevron-left {
     position: fixed;
+    user-select: none;
     right: 0;
     width: 40%;
     height: 100vh;

@@ -21,6 +21,7 @@
     height: 20vw;
     max-width: 300px;
     max-height: 300px;
+    user-select: none;
 }
 
 #about-container p {
@@ -38,6 +39,7 @@
     height: 20vw;
     max-width: 300px;
     max-height: 300px;
+    user-select: none;
 }
 
 #code-section p {
