@@ -1,6 +1,6 @@
 #contact-container {
     position: absolute;
-    top: 15vh;
+    top: 30vh;
     left: 0;
     right: 0;
     margin: auto;
@@ -8,87 +8,46 @@
 }
 
 #contact-container h3 {
-    max-width: 400px;
-    margin: 0px auto 1.5rem auto;
+    max-width: 500px;
+    margin: 0px auto 2rem auto;
     opacity: 0;
     animation: load 0.25s forwards;
     animation-delay: 1s;
 }
 
-#contact-container p {
-    max-width: 300px;
-    margin: 0px auto 1.5rem auto;
-    font-size: 0.8rem;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1.25s;
-}
-
-#contact-container p strong {
-    color: lime;
-}
-
-#title-field {
-    background-color: transparent;
-    color: white;
-    font-family: "Inter";
-    font-size: 1.5rem;
-    border: 1px solid white;
-    margin-bottom: 1rem;
-    width: 40%;
-    max-width: 500px;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1.5s;
-}
-
-#content-field {
-    background-color: transparent;
-    color: white;
-    font-family: "Inter";
-    font-size: 1rem;
-    border: 1px solid white;
-    resize: none;
-    width: 40%;
-    max-width: 500px;
-    min-height: 200px;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1.75s;
-}
-
-#content-field::-webkit-scrollbar {
-    width: 0.4rem;
-}
-
-#content-field::-webkit-scrollbar-track {
-    border: 1px solid white;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-#content-field::-webkit-scrollbar-thumb {
-    background-color: lime;
-    outline: 1px solid black;
-}
-
 #submit-btn {
     color: white;
     font-size: 1.5rem;
+    width: 10rem;
+    height: 5rem;
     border: 2px solid white;
-    margin-top: 1rem;
     font-family: "Inter";
     cursor: pointer;
     opacity: 0;
     background: linear-gradient(to left, transparent 50%, lime 50%) right;
     background-size: 200%;
     transition: .3s ease-out;
-    animation: load 1.5s forwards;
-    animation-delay: 2s;
+    animation: load 0.25s forwards;
+    animation-delay: 1.25s;
 }
 
 #submit-btn:hover {
     background-position: left;
 }
+
+#contact-container p {
+    max-width: 300px;
+    margin: 2rem auto 1.5rem auto;
+    font-size: 0.8rem;
+    opacity: 0;
+    animation: load 0.25s forwards;
+    animation-delay: 1.5s;
+}
+
+#contact-container p strong {
+    color: lime;
+}
+
 
 @keyframes load {
     to {

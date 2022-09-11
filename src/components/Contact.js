@@ -13,12 +13,14 @@ export default function Contact(props) {
     
     return (
         <div id="contact-container" ref={contactRef}>
-            <h3>If you would like to contact me regarding work, send me an email using the form below.</h3>
-            <p>Alternatively, send it to <strong>ben.sommer.skovgaard@gmail.com</strong><br/> elsewhere if you prefer.</p>
-            <form action="mailto:ben.sommer.skovgaard@gmail.com" method="GET">
-                <input id="title-field" placeholder="Title" name="subject" type="text" /><br />
-                <textarea id="content-field" placeholder="Content" name="body" /><br />
-                <input id="submit-btn" type="submit" value="Send" />
+            <form action="mailto:ben.sommer.skovgaard@gmail.com" method="get">
+                <h3>
+                    If you would like to contact me regarding work, 
+                    you can do so through my LinkedIn link on the home page
+                    or by clicking the button below to send me an email.
+                </h3>
+                <input id="submit-btn" type="submit" value="Go" />
+                <p>Alternatively, send it to <strong>ben.sommer.skovgaard@gmail.com</strong><br/> elsewhere if you prefer.</p>
             </form>
         </div>
     )
