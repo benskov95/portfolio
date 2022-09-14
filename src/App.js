@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import Background from './components/Background';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -18,10 +18,11 @@ function App() {
         <Background />
 
         <Routes>
-          <Route path='/' element={<Home previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
-          <Route path='/work' element={<Work previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
-          <Route path='/about' element={<About previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
-          <Route path='/contact' element={<Contact previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path="/portfolio" element={<Navigate replace to="/" />} />
+          <Route path="/" element={<Home previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path="/work" element={<Work previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path="/about" element={<About previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
+          <Route path="/contact" element={<Contact previousLoc={previousLoc} setPreviousLoc={setPreviousLoc} />} />
         </Routes> 
       </div>
     </BrowserRouter>
