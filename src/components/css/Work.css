@@ -1,6 +1,6 @@
 #work-container {
     position: absolute;
-    top: 8vh;
+    top: 10vh;
     left: 0;
     right: 0;
     margin: auto;
@@ -73,10 +73,30 @@
 #carousel p {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
-    padding: 1rem 0px 1rem 0px;
+    padding: 1rem 1rem 1rem 0px;
+    margin: 1rem auto 0px auto;
     width: 60%;
     max-width: 600px;
-    margin: 1rem auto 0px auto;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+#carousel p::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+#carousel p::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 40px;
+    border-width: 0px;
+}
+
+#carousel p a:link {
+    color: lime;
+}
+
+#carousel p a:visited {
+    color: lime;
 }
 
 @keyframes load-a {
