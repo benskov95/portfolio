@@ -9,7 +9,7 @@ const workList =
         image: messengerPic,
         link: "https://benskov.com/messenger/",
         title: "Messenger",
-        desc: "This is a heavily Discord-inspired and simple messenger app I made with React (JavaScript), with a Java REST API for the back-end. <br /><br /> You can use the app to send/receive friend requests and send direct messages to people on your friend list. <br /><br /> I also set it up to use Websockets for real-time communication, and with Electron to make it available as a desktop app. <br /><br /> <a href=\"https://drive.google.com/file/d/1rnD5d-5WpW7sqxpcGzzGetCvwSqpdU7o/view?usp=sharing\" target=\"_blank\" rel=\"noreferrer\">Download the Electron app installer here if you want to try it as a desktop app</a>" 
+        desc: "This is a heavily Discord-inspired and simple messenger app I made with React (JavaScript), with a Java REST API for the back-end. <br /><br /> You can use the app to send/receive friend requests and send direct messages to people on your friend list. <br /><br /> I also set it up to use Websockets for real-time communication, and with Electron to make it available as a desktop app. <br /><br /> <a href=\"https://drive.google.com/file/d/1rnD5d-5WpW7sqxpcGzzGetCvwSqpdU7o/view?usp=sharing\" target=\"_blank\" rel=\"noreferrer\">Download the Electron app installer here if you want to try it as a desktop app (Windows only)</a>" 
     },
     {
         image: restaurantPic,
