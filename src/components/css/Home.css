@@ -94,3 +94,13 @@
         margin-right: 35%;
     }
 }
+
+@media (max-width: 400px) {
+    #home-container h2 {
+        font-size: 2rem;
+    }
+
+    #home-container h1 {
+        font-size: 4rem;
+    }
+}
