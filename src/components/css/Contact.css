@@ -4,24 +4,20 @@
     left: 0;
     right: 0;
     margin: auto;
+    opacity: 0;
     animation: load 1s forwards;
+    animation-delay: 1s;
 }
 
 #contact-container h3 {
     max-width: 500px;
     margin: 0px auto 2rem auto;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1s;
 }
 
 #contact-container p {
     max-width: 300px;
     margin: 2rem auto 1.5rem auto;
     font-size: 0.8rem;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1.5s;
 }
 
 #contact-container p strong {
@@ -37,9 +33,6 @@
     margin-bottom: 1rem;
     width: 40%;
     max-width: 500px;
-    opacity: 0;
-    animation: load 0.25s forwards;
-    animation-delay: 1.5s;
 }
 
 #message-field {
@@ -51,10 +44,7 @@
     width: 40%;
     max-width: 500px;
     min-height: 200px;
-    opacity: 0;
     resize: none;
-    animation: load 0.25s forwards;
-    animation-delay: 1.75s;
 }
 
 #message-field::-webkit-scrollbar {
@@ -80,12 +70,9 @@
     border: 2px solid white;
     font-family: "Inter";
     cursor: pointer;
-    opacity: 0;
     background: linear-gradient(to left, transparent 50%, lime 50%) right;
     background-size: 200%;
     transition: .3s ease-out;
-    animation: load 0.25s forwards;
-    animation-delay: 1.25s;
 }
 
 #submit-btn:hover {
