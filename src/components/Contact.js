@@ -3,10 +3,10 @@ import "./css/Contact.css";
 import emailjs from "@emailjs/browser";
 
 export default function Contact(props) {
-    const emailInitialState = {userEmail: "", subject: "", message: ""}
+    const emailInitialState = {userEmail: "", subject: "", message: ""};
     const contactRef = useRef();
     const form = useRef();
-    const [email, setEmail] = useState(emailInitialState)
+    const [email, setEmail] = useState(emailInitialState);
     const [status, setStatus] = useState({statusMsg: "", didSend: false});
 
     useEffect(() => {
