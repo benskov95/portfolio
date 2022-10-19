@@ -3,9 +3,10 @@ import "./css/Contact.css";
 import emailjs from "@emailjs/browser";
 
 export default function Contact(props) {
+    const emailInitialState = {userEmail: "", subject: "", message: ""}
     const contactRef = useRef();
     const form = useRef();
-    const [email, setEmail] = useState({userEmail: "", subject: "", message: ""})
+    const [email, setEmail] = useState(emailInitialState)
     const [status, setStatus] = useState({statusMsg: "", didSend: false});
 
     useEffect(() => {
@@ -31,6 +32,7 @@ export default function Contact(props) {
                 newStatus.didSend = true;
                 newStatus.statusMsg = "Thank you, your email has been sent. I will get back to you as soon as possible.";
                 setStatus(newStatus);
+                setEmail(emailInitialState);
                 return;
             }
             newStatus.didSend = false;
@@ -64,10 +66,10 @@ export default function Contact(props) {
             <h3>
                 If you would like to contact me regarding work, 
                 you can do so through my LinkedIn link on the home page
-                or by clicking the button below to send me an email.
+                or by sending me an email using the form below.
             </h3>
             <p>
-                Alternatively, send it to <strong>ben.sommer.skovgaard@gmail.com</strong><br/> elsewhere if you prefer.
+                Alternatively, you can send it to <strong>ben.sommer.skovgaard@gmail.com</strong><br/> elsewhere if you prefer.
             </p>
             <form ref={form} onSubmit={sendEmail}>
                 <input 
